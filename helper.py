@@ -84,7 +84,7 @@ def emojier(selected_user,df):
 
     emojis = []
     for i in df['message']:
-        emojis.extend([c for c in i if c in emoji.EMOJI_DATA['en']])
+        emojis.extend([c for c in i if c in emoji.UNICODE_EMOJI['en']])
     
     emoji_df = pd.DataFrame(Counter(emojis).most_common(len(Counter(emojis))))
     emoji_df['Percentage'] = round(emoji_df[1]/len(emojis)*100,2)
