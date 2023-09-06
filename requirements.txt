@@ -4,4 +4,4 @@ seaborn
 pandas
 urlextract
 wordcloud
-emoji
+emoji==1.7.0
